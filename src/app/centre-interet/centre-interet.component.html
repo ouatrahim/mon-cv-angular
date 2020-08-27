@@ -1,0 +1,49 @@
+<div id="centreInteret" style="margin-top: 30px; margin-bottom: 30px;">
+  <h3>Centre d'interet</h3>
+  <div id="listeInteret">
+
+  </div>
+  <script>
+    var centreInteret = ["Lecture", "Musique", "Serie"];
+    // centreInteret[1] = "Danse";
+    console.log("centreInteret", centreInteret);
+    document.getElementById('listeInteret').innerHTML =
+      "J'ai ".concat(centreInteret.length, " centres d'interet qui sont: ", centreInteret.join(" ; "));
+  </script>
+  <script>
+    // var retrait = centreInteret.pop();
+    // centreInteret.push("Musique");
+    // centreInteret.unshift("Lutte");
+    // centreInteret.splice(1, 0, "Danse", "Lutte", "Gastronomie");
+    var centreInteret2 = ['Danse', "Lutte", "Gastronomie"];
+    console.log("centreInteret2", centreInteret2);
+    var centreInteretTotal = centreInteret.concat(centreInteret2);
+    // for (var index = 0; index < centreInteretTotal.length; index++) {
+    //     // console(centreInteret[index]);
+    //     const element = centreInteretTotal[index];
+    //     console.log("Affichage de l'element à l'index ", index, " :", element);
+    // }
+    console.log("centreInteretTotal", centreInteretTotal);
+    // console.log(retrait);
+  </script>
+  <script>
+    var coupure = centreInteretTotal.slice(1);
+    // console.log("coupure", coupure);
+    // console.log("centreInteretTotal apres coupure", centreInteretTotal);
+  </script>
+  <script>
+    var centreInteretTotalOrdonne = centreInteretTotal.sort().reverse();
+    console.log("centre une fois ordonné", centreInteretTotalOrdonne);
+  </script>
+  <script>
+    var mesSalaires = [0, 30000, 100000, 150000, 300000, 800000];
+    var mesSalairesNonOrdonne = [100000, 0, 150000, 800000, 300000];
+    console.log("Mes salaires non ordonnées", mesSalairesNonOrdonne);
+    var mesSalairesOrdonne = mesSalairesNonOrdonne.sort();
+    console.log("mes salaires ordonnées sans methode de comparaison", mesSalairesOrdonne);
+    mesSalairesOrdonne = mesSalairesNonOrdonne.sort(function (a, b) {
+      return b - a;
+    });
+    console.log("mes salaires ordonnees avec comparaison", mesSalairesOrdonne);
+  </script>
+</div>

@@ -1,0 +1,67 @@
+<div id="contact-form">
+  <h3>FORMULAIRE DE CONTACT</h3>
+  <form action="">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label for="nom">Votre nom: </label>
+          <input class="form-control" onkeydown="dupliquer()" type="text" id="nom" name="nom" maxlength="20">
+        </div>
+        <script>
+          function dupliquer() {
+            document.getElementById('prenom').value = document.getElementById('prenom').value + document.getElementById(
+              'nom').value;
+          }
+        </script>
+      </div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <!-- <label for="prenom">Votre prenom: </label> -->
+          <input placeholder="Votre prenom: " class="form-control" type="text" name="prenom" maxlength="20" id="prenom">
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <input type="button" value="Vider prenom" class="btn btn-info" onmouseover="viderPrenom()">
+        <script>
+          function viderPrenom() {
+            document.getElementById('prenom').value = null;
+          }
+        </script>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="mail">Votre email </label>
+      <input class="form-control" type="email" name="mail" id="email">
+    </div>
+    <div class="form-group">
+      <label for="age">Votre age: </label>
+      <input class="form-control" type="number" name="age" min="0" step="2000" id="monAge">
+    </div>
+    <div class="form-group">
+      <textarea class="form-control" name="message" id="message" cols="50" rows="10">Votre message ...</textarea>
+    </div>
+    <div class="form-group">
+      <label for="daterdv">Date de RDV: </label>
+      <input class="form-control" type="date" name="daterdv" id="daterdv">
+    </div>
+    <div class="form-group">
+      Pièces jointes: <input class="form-control-file" type="file" name="pj" id="pj" accept=".pdf,.png">
+    </div>
+    <div class="form-group">
+      <label for="sexe">Votre sexe: </label>
+      <select class="form-control" name="sexe" id="sexe">
+        <option value="m">Masculin</option>
+        <option value="f">Feminin</option>
+      </select>
+    </div>
+    <div class="form-check form-check-inline">
+      <label class="form-check-label" for="sur">Etes vous sûr?</label>
+      <input class="form-check-input" type="checkbox" name="sur" id="sur">
+    </div>
+    <dir>
+      <!-- <input type="button" value="Envoyer"> -->
+      <input class="btn btn-outline-primary" type="submit" value="Envoyer">
+    </dir>
+  </form>
+</div>
